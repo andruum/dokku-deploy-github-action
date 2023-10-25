@@ -20,7 +20,7 @@ git_repo="$DOKKU_USER@$DOKKU_HOST:$DOKKU_APP_NAME"
 cd "$GITHUB_WORKSPACE"
 git remote add deploy "$git_repo"
 
-git config "lfs.https://$DOKKU_HOST/$DOKKU_APP_NAME/info/lfs.locksverify" false
+git config lfs.locksverify false
 
 # Prepare to push to Dokku git repository
 REMOTE_REF="$COMMIT:refs/heads/$DOKKU_REMOTE_BRANCH"
